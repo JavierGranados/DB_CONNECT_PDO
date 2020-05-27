@@ -1,6 +1,13 @@
 <?php
-#VARIABLES DE CONEXION
-define('HOST', 'TU_HOST');
-define('DBNAME','TU_BASE_DE_DATOS');
-define('USER','TU_USUARIO');
-define('PASSWORD','TU_CONTRASEÑA');
+/*************************************************************
+  DATA OF CONNECTION - DATOS DE CONEXION
+*************************************************************/
+  define('ENV','dev');
+  define('DB',
+    [  
+      'dsn'=>  (ENV === 'dev') ? 'mysql:host=localhost;dbname=YOU_DATABASE' : '',
+      'user'=> (ENV === 'dev') ? 'root' : '',
+      'password'=> (ENV === 'dev') ? '': ''
+    ]
+  );   
+
